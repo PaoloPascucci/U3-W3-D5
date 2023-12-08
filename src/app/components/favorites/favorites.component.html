@@ -1,0 +1,11 @@
+ <div class="row">
+    <div *ngFor="let fav of favorites" class="col-md-4 mb-4">
+      <div class="card">
+        <!-- <img src="http://image.tmdb.org/t/p/w500{{fav.poster_path}}" class="card-img-top" alt="fav Poster"> -->
+        <div class="card-body">
+          <!-- <h5 class="card-title">{{ fav.title }}</h5> -->
+          <button type="button" class="btn btn-primary" (click)="removeFavorite(fav.movieId)">Rimuovi</button>
+        </div>
+      </div>
+    </div>
+  </div>

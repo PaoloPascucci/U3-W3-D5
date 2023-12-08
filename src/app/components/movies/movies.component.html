@@ -1,0 +1,12 @@
+ <div class="container-fluid mt-3 d-flex flex-wrap">
+    <div class="col-md-3 m-3" *ngFor="let movie of movies">
+        <div class="card">
+            <img class="card-img-top" src="http://image.tmdb.org/t/p/w500{{movie.poster_path}}"
+                alt="movie.title" />
+            <div class="card-body">
+                <h4 class="card-title">{{movie.title}}</h4>
+                <button type="button" class="btn btn-primary" (click)="addF(user.id, movie.id)">Rimuovi</button>
+            </div>
+        </div>
+    </div>
+</div>
