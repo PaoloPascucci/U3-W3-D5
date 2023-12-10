@@ -27,8 +27,8 @@ export class AuthService {
         this.utente = loggato;        
         this.userService.setCurrentUser(loggato); 
         localStorage.setItem('user', JSON.stringify(loggato));
-        console.log(this.user$);
-        alert('Login effettuato');
+        //console.log(this.user$);
+        //alert('Login effettuato');
         this.router.navigate(['/']);
       }),
       catchError(this.errors)

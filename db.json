@@ -3,20 +3,37 @@
     {
       "email": "dario@dario.com",
       "password": "$2a$10$ZLY63quWnMVo0lO951uFdOJRfUxeo8U6YJ/Cue06Vgp4Ad8S/CjaC",
-      "name": "Dario",
+      "username": "Dario Del Giudice",
       "id": 2
+    },
+    {
+      "email": "paolo@paolo.com",
+      "password": "$2a$10$Rt.0tjJ1dv8tYw4D1II01O41yUqhUhXbNXsWTJ0SZOuk2HG5oIlqm",
+      "username": "Paolo Paolo",
+      "id": 3
+    },
+    {
+      "email": "mario@mario.com",
+      "password": "$2a$10$sjb9r/sLQX3XUHlpy7m1yeDqfvdldbnBrsQvJh5Zm5uDTdgFAWJ2y",
+      "username": "Mario Mario",
+      "id": 4
     }
   ],
   "favorites": [
     {
       "userId": 2,
+      "movieId": 791373,
+      "id": 12
+    },
+    {
+      "userId": 3,
       "movieId": 460465,
-      "id": 6
+      "id": 13
     },
     {
       "userId": 2,
-      "movieId": 632357,
-      "id": 8
+      "movieId": 804435,
+      "id": 14
     }
   ],
   "movies-popular": [

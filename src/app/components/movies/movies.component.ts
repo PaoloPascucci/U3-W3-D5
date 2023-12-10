@@ -3,6 +3,7 @@ import { MoviesService } from 'src/app/services/movies.service';
 import { Movie } from 'src/app/models/movie';
 import { FavoritesService } from 'src/app/services/favorites.service';
 import { UserService } from 'src/app/services/user-service.service';
+import { Favourite } from 'src/app/models/favourite';
 
 @Component({
   selector: 'app-movies',
@@ -12,6 +13,7 @@ import { UserService } from 'src/app/services/user-service.service';
 export class MoviesComponent implements OnInit {
   movies: Movie[] = [];
   user: any;
+  favorites: Favourite[] = [];
   constructor(
     private movieSrv: MoviesService,
     private favSrv: FavoritesService,
@@ -29,9 +31,13 @@ export class MoviesComponent implements OnInit {
         console.error('Errore nella get dei film', error);
       }
     );
-    this.user = this.userSrv;
+    this.user = this.userSrv.getCurrentUser();
+    console.log(this.user);
+    
   }
   addF(uId: number, mId: number) {
-    return this.favSrv.addFavorite(uId, mId);
+    return this.favSrv.addFavorite(uId, mId).subscribe((newFav)=> {
+      this.favorites.push(newFav);
+    });
   }
 }

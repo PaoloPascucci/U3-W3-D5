@@ -20,6 +20,7 @@ export class FavoritesService {
 
   addFavorite(userId: number, movieId: number): Observable<Favourite> {
     const newFavorite: Favourite = { userId, movieId };
+    console.log(newFavorite);
     return this.http.post<Favourite>(`${this.api}/favorites`, newFavorite);
   }
 

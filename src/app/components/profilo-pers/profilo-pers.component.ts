@@ -13,6 +13,6 @@ export class ProfiloPersComponent implements OnInit {
 
   ngOnInit(): void {
     this.utente = this.userSrv.getCurrentUser();
-    console.log(this.utente);
+    //console.log(this.utente);
   }
 }

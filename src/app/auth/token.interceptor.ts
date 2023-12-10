@@ -22,7 +22,7 @@ export class TokenInterceptor implements HttpInterceptor {
       take(1),
       switchMap((utente) => {
         if (!utente) {
-          console.log(request);
+          //console.log(request);
           return next.handle(request);
         }
         this.newReq = request.clone({
@@ -31,8 +31,8 @@ export class TokenInterceptor implements HttpInterceptor {
             `Bearer ${utente.accessToken}`
           ),
         });
-        console.log(request);
-        console.log(this.newReq);
+        //console.log(request);
+        //console.log(this.newReq);
         return next.handle(this.newReq);
       })
     );

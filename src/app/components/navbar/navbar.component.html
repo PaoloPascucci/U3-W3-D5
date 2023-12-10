@@ -24,7 +24,7 @@
         </ul>
       </div>
       <div class="logged" *ngIf="utente">
-       <p> Benvenuto {{user.username}}</p>
+       <p> Benvenuto {{utente.user.username}}</p>
        <button type="button" class="btn btn-danger ms-2 float-end" (click)="logout()">Logout</button>
       </div>
     </div>
